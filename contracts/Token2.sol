@@ -7,7 +7,8 @@ contract Token2 is ERC20Detailed, ERC20 {
     constructor() ERC20Detailed('Token2', 'TK2', 18) public {
         _mint(msg.sender, 1000000000);
     }
-    function faucet() public returns (bool){
-        _mint(msg.sender, 1000000000);
+    function faucet(uint _amount) public returns (bool){
+        _mint(msg.sender, _amount);
+        return true;
     }
 }
